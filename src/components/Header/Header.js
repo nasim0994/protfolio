@@ -5,6 +5,7 @@ import bannerImg from "../../images/banner.png";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { Typewriter } from "react-simple-typewriter";
 
 const Header = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -127,7 +128,23 @@ const Header = () => {
               </h1>
               <h2 className="text-3xl font-semibold text-neutral">
                 <span className="pr-2">And</span>
-                <span className="text-gradient">I'm a Front End Developer</span>
+                <span className="text-gradient">
+                  <Typewriter
+                    words={[
+                      "I am Front End Developer",
+                      "I am MERN Stack Developer",
+                      "I am Full Stack Developer",
+                    ]}
+                    loop={true}
+                    cursor
+                    cursorStyle="|"
+                    cursorColor="#fff"
+                    cursorBlinking={true}
+                    typeSpeed={100}
+                    deleteSpeed={100}
+                    delaySpeed={1500}
+                  />
+                </span>
               </h2>
             </div>
 
