@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
 import bannerImg from "../../images/banner.png";
@@ -8,23 +8,27 @@ import { loadFull } from "tsparticles";
 import { Typewriter } from "react-simple-typewriter";
 
 const Header = () => {
+  const [activeNav, setActiveNav] = useState(false);
+
+  const handeStickyNav = () => {
+    if (window.scrollY > 0) {
+      setActiveNav(true);
+    } else {
+      setActiveNav(false);
+    }
+  };
+
+  window.addEventListener("scroll", handeStickyNav);
+
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
   return (
     <header>
       <Particles
         id="tsparticles"
         init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           fpsLimit: 60,
           interactivity: {
@@ -93,7 +97,7 @@ const Header = () => {
           detectRetina: true,
         }}
       />
-      <nav className="top-menu">
+      <nav className={activeNav ? "top-menu-active top-menu" : "top-menu"}>
         <div className="lg:w-[1200px] mx-auto flex justify-between items-center">
           <div>
             <Link to="/home" className="text-gradient font-bold text-2xl">
@@ -103,14 +107,30 @@ const Header = () => {
           </div>
           <div>
             <ul className="flex">
-              <li className="p-4 text-neutral">
-                <NavLink to="">Item 1</NavLink>
+              <li>
+                <NavLink to="" className="text-neutral">
+                  Home
+                </NavLink>
               </li>
-              <li className="p-4 text-neutral">
-                <NavLink to="">Item 1</NavLink>
+              <li>
+                <NavLink to="" className="text-neutral">
+                  Project
+                </NavLink>
               </li>
-              <li className="p-4 text-neutral">
-                <NavLink to="">Item 1</NavLink>
+              <li>
+                <NavLink to="" className="text-neutral">
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="" className="text-neutral">
+                  Blogs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="" className="text-neutral">
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -128,7 +148,7 @@ const Header = () => {
               </h1>
               <h2 className="text-3xl font-semibold text-neutral">
                 <span className="pr-2">And</span>
-                <span className="text-gradient">
+                <span className=" animate_type">
                   <Typewriter
                     words={[
                       "I am Front End Developer",
@@ -138,8 +158,6 @@ const Header = () => {
                     loop={true}
                     cursor
                     cursorStyle="|"
-                    cursorColor="#fff"
-                    cursorBlinking={true}
                     typeSpeed={100}
                     deleteSpeed={100}
                     delaySpeed={1500}
