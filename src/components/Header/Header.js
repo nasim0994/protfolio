@@ -100,7 +100,7 @@ const Header = () => {
       <nav className={activeNav ? "top-menu-active top-menu" : "top-menu"}>
         <div className="lg:w-[1200px] mx-auto flex justify-between items-center">
           <div>
-            <Link to="/home" className="text-gradient font-bold text-2xl">
+            <Link to="/home" className="text-gradient font-bold text-2xl logo">
               <span>Nasim</span>
               <span>Uddin</span>
             </Link>
@@ -136,7 +136,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <div className="h-[500px] relative">
+      <div>
         <div className="lg:w-[1200px] mx-auto">
           <div className="flex justify-between items-center">
             <div className="w-[50%] ">
@@ -167,7 +167,11 @@ const Header = () => {
             </div>
 
             <div className="w-[50%] flex justify-end">
-              <img src={bannerImg} alt="" className="w-[365px] mt-[-50px] " />
+              <img
+                src={bannerImg}
+                alt=""
+                className="w-[365px] absolute bottom-0"
+              />
             </div>
           </div>
         </div>
