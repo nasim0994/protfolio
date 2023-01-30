@@ -1,0 +1,105 @@
+/*-------- Product Card Style --------*/
+.productCard {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.cardContent {
+  padding: 10px;
+  transform: scale(0.98);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.card-btn {
+  transform: translateY(88px);
+  transition: transform 0.3s ease;
+}
+
+.product-img {
+  position: relative;
+}
+.product-img img {
+  height: 310px;
+  width: 100%;
+}
+.card-top {
+  position: relative;
+  overflow: hidden;
+}
+
+.live-link {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 4px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  transform: translateY(45px);
+  transition: transform 0.3s ease;
+}
+
+/*--- Card Hover Effect ------*/
+.productCard:hover {
+  z-index: 20;
+}
+.productCard:hover .cardContent {
+  transition: opacity 0.3s ease, visibility 0s ease, transform 0.3s ease;
+  transform: scale(1);
+  background-color: #fff;
+  box-shadow: 0 0 10px #00000026;
+  border-radius: 6px;
+}
+
+.productCard:hover .card-btn {
+  transform: translateY(0px);
+}
+.productCard:hover .live-link {
+  transform: translateY(0px);
+}
+
+.product-size-option {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fffffff3;
+  padding: 10px;
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+
+.quick-view {
+  position: relative;
+}
+.quick-view-overly {
+  position: fixed;
+  background: #000000c2;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  transform: scale(0);
+}
+.quick-view-content {
+  position: fixed;
+  width: 50%;
+  background: #fff;
+  z-index: 999999;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  transition: left 0.3s;
+  visibility: hidden;
+}
+
+/*----------- FEATURED PRODUCTS End----------------*/

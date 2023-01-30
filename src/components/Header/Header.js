@@ -124,13 +124,17 @@ const Header = () => {
               </li>
               <li>
                 <NavLink to="" className="text-neutral">
-                  Blogs
+                  Contact
                 </NavLink>
               </li>
               <li>
-                <NavLink to="" className="text-neutral">
-                  Contact
-                </NavLink>
+                <Link
+                  to="https://codegallery-32763.web.app/"
+                  target="_blank"
+                  className="text-neutral"
+                >
+                  Blogs
+                </Link>
               </li>
             </ul>
           </div>
@@ -164,6 +168,17 @@ const Header = () => {
                   />
                 </span>
               </h2>
+              {/* Button */}
+              <div className="mt-4">
+                <button className="px-4 py-3 rounded-md text-white bg-gradient text-sm font-semibold scale-[.96] hover:scale-[1] duration-300">
+                  <a
+                    href="https://drive.google.com/file/d/1FPrMUC8XSdUkckLhm9ERjXuLz_ayWiId/view?usp=share_link"
+                    target="blank"
+                  >
+                    View Resume
+                  </a>
+                </button>
+              </div>
             </div>
 
             <div className="w-[50%] flex justify-end">
