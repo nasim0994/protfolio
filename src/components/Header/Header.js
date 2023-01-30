@@ -138,7 +138,7 @@ const Header = () => {
       </nav>
       <div>
         <div className="lg:w-[1200px] mx-auto">
-          <div className="flex justify-between items-center">
+          <div className="h-[500px] flex justify-between items-center">
             <div className="w-[50%] ">
               <h2 className="text-3xl font-semibold text-neutral">
                 Hello, my name is
@@ -178,10 +178,10 @@ const Header = () => {
       </div>
 
       {/* <!-- Animation --> */}
-      <div class="animation animation-1"></div>
-      <div class="animation animation-2"></div>
-      <div class="animation animation-3"></div>
-      <div class="animation animation-4"></div>
+      <div className="animation animation-1"></div>
+      <div className="animation animation-2"></div>
+      <div className="animation animation-3"></div>
+      <div className="animation animation-4"></div>
     </header>
   );
 };
