@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import bikroyStore from "../../images/bikroy.png";
-import { AiOutlineLink } from "react-icons/ai";
+import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 
 const ProjectCard = () => {
   return (
@@ -35,11 +35,17 @@ const ProjectCard = () => {
         </div>
 
         <div class="card-btn mt-3 flex justify-between">
-          <button className="text-info text-sm border rounded-md py-2 px-1 scale-[.97] hover:scale-[1] duration-300">
-            Client Side Code
+          <button className="text-info text-sm border rounded-md py-2 px-2 scale-[.97] hover:scale-[1] hover:bg-gray-50 duration-300">
+            <Link to="" className="flex gap-1 items-center">
+              <AiFillGithub className="text-lg" />
+              Client Code
+            </Link>
           </button>
-          <button className="text-info text-sm border rounded-md py-2 px-1 scale-[.97] hover:scale-[1] duration-300">
-            Server side Code
+          <button className="text-info text-[15px] border rounded-md py-2 px-2 scale-[.97] hover:scale-[1] hover:bg-gray-50 duration-300">
+            <Link to="" className="flex gap-1 items-center">
+              <AiFillGithub className="text-lg" />
+              Server Code
+            </Link>
           </button>
         </div>
       </div>

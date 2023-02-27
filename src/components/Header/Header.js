@@ -106,37 +106,40 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <ul className="flex">
-              <li>
-                <NavLink to="" className="text-neutral">
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="" className="text-neutral">
-                  Project
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="" className="text-neutral">
-                  Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="" className="text-neutral">
-                  Contact
-                </NavLink>
-              </li>
-              <li>
-                <Link
-                  to="https://codegallery-32763.web.app/"
-                  target="_blank"
-                  className="text-neutral"
-                >
-                  Blogs
-                </Link>
-              </li>
-            </ul>
+            <button></button>
+            <nav>
+              <ul className="flex">
+                <li>
+                  <NavLink to="" className="text-neutral">
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="" className="text-neutral">
+                    Project
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="" className="text-neutral">
+                    Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="" className="text-neutral">
+                    Contact
+                  </NavLink>
+                </li>
+                <li>
+                  <Link
+                    to="https://codegallery-32763.web.app/"
+                    target="_blank"
+                    className="text-neutral"
+                  >
+                    Blogs
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </nav>

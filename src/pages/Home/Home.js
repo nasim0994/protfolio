@@ -1,14 +1,16 @@
 import React from "react";
 import About from "../../components/About/About";
 import Projects from "../../components/Projects/Projects";
+import Skills from "../../components/Skills/Skills";
+import Contact from "./../../components/Contact/Contact";
 
 const Home = () => {
   return (
     <div className="py-10">
       <About />
       <Projects />
-
-      <section className="py-96"></section>
+      <Skills />
+      <Contact />
     </div>
   );
 };

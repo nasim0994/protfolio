@@ -11,6 +11,8 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: #344767;
 }
 .logo {
   font-family: "Pacifico", cursive;

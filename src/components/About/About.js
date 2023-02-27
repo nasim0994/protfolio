@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../images/na.jpeg";
+import me from "../../images/na.jpg";
 import CountUp from "react-countup";
 
 const About = () => {
