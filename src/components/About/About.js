@@ -4,14 +4,14 @@ import CountUp from "react-countup";
 
 const About = () => {
   return (
-    <div className="w-[1200px] mx-auto bg-neutral py-10">
-      <div className="flex gap-14">
-        <div className="w-[40%] flex flex-col items-end">
+    <div className="w-[90%] xl:w-[1200px] mx-auto bg-neutral py-10">
+      <div className="lg:flex gap-14">
+        <div className="lg:w-[40%] flex flex-col items-end">
           <div className="about-img-bg">
             <img src={me} alt="" className="rounded-xl" />
           </div>
         </div>
-        <div className="w-[60%]">
+        <div className="lg:w-[60%] mt-8 lg:mt-0">
           <h2 className="text-4xl font-bold text-info pb-3">About Me</h2>
           <h2 className="text-2xl text-info font-semibold pb-2">
             My Name is Nasim Uddin.{" "}

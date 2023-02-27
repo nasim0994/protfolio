@@ -4,10 +4,10 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <div className="w-[1200px] mx-auto py-10 ">
+    <div className="w-[90%] xl:w-[1200px] mx-auto py-10 ">
       <h2 className="text-center text-4xl text-info font-bold">My Project</h2>
 
-      <div className="grid grid-cols-4 gap-2 mt-10">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 mt-10">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />

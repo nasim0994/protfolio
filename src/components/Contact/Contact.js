@@ -11,7 +11,7 @@ import { MdLocationOn, MdEmail, MdFacebook } from "react-icons/md";
 const Contact = () => {
   return (
     <div>
-      <div className="w-[1200px] mx-auto py-10">
+      <div className="w-[90%] xl:w-[1200px] mx-auto py-10">
         {/* Title */}
         <div className="text-center mb-14">
           <h2 className="text-3xl text-info font-semibold text-gradient">
@@ -46,7 +46,7 @@ const Contact = () => {
                 <div className="border border-title rounded-full w-10 h-10 flex items-center justify-center">
                   <MdLocationOn />
                 </div>
-                <p>Road 14/1, Block - G, Niketon, Gulshan Bangladesh</p>
+                <p>Dhaka, Bangladesh</p>
               </div>
             </div>
 
@@ -121,7 +121,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="grid lg:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label for="">
                     Phone <span className="text-primary">*</span>

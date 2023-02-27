@@ -6,7 +6,7 @@ header {
   background-position: center;
   background-position: 50%;
   position: relative;
-  height: 550px;
+  height: 100vh;
 }
 
 .top-menu {
@@ -115,5 +115,19 @@ span.animate_type span {
 
   100% {
     background-position-x: 0px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .mobile-menu {
+    width: 100%;
+    text-align: end;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.5s;
+  }
+  .show-mobile-menu {
+    max-height: 600px;
   }
 }

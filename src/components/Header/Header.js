@@ -7,8 +7,12 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { Typewriter } from "react-simple-typewriter";
 
+import { FiMenu } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
+
 const Header = () => {
   const [activeNav, setActiveNav] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   const handeStickyNav = () => {
     if (window.scrollY > 0) {
@@ -17,9 +21,7 @@ const Header = () => {
       setActiveNav(false);
     }
   };
-
   window.addEventListener("scroll", handeStickyNav);
-
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -97,44 +99,48 @@ const Header = () => {
           detectRetina: true,
         }}
       />
-      <nav className={activeNav ? "top-menu-active top-menu" : "top-menu"}>
-        <div className="lg:w-[1200px] mx-auto flex justify-between items-center">
-          <div>
-            <Link to="/home" className="text-gradient font-bold text-2xl logo">
+
+      <div className={activeNav ? "top-menu-active top-menu" : "top-menu"}>
+        <div className="sm:flex justify-between items-center py-2">
+          <div className="flex justify-between">
+            <Link
+              to="/home"
+              className="text-gradient font-bold text-xl sm:text-2xl logo"
+            >
               <span>Nasim</span>
               <span>Uddin</span>
             </Link>
+
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              className={`text-xl sm:hidden ${
+                activeNav ? "text-title" : "text-neutral"
+              }`}
+            >
+              {mobileMenu ? <AiOutlineClose /> : <FiMenu />}
+            </button>
           </div>
           <div>
-            <button></button>
-            <nav>
-              <ul className="flex">
+            <nav
+              className={`mobile-menu ${
+                mobileMenu && "show-mobile-menu border-t border-gray-500 mt-2 "
+              }`}
+            >
+              <ul className="sm:flex text-neutral">
                 <li>
-                  <NavLink to="" className="text-neutral">
-                    Home
-                  </NavLink>
+                  <NavLink to="">Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="" className="text-neutral">
-                    Project
-                  </NavLink>
+                  <NavLink to="">Project</NavLink>
                 </li>
                 <li>
-                  <NavLink to="" className="text-neutral">
-                    Services
-                  </NavLink>
+                  <NavLink to="">Services</NavLink>
                 </li>
                 <li>
-                  <NavLink to="" className="text-neutral">
-                    Contact
-                  </NavLink>
+                  <NavLink to="">Contact</NavLink>
                 </li>
                 <li>
-                  <Link
-                    to="https://codegallery-32763.web.app/"
-                    target="_blank"
-                    className="text-neutral"
-                  >
+                  <Link to="https://codegallery-32763.web.app/" target="_blank">
                     Blogs
                   </Link>
                 </li>
@@ -142,18 +148,19 @@ const Header = () => {
             </nav>
           </div>
         </div>
-      </nav>
+      </div>
+
       <div>
-        <div className="lg:w-[1200px] mx-auto">
+        <div className="w-[90%] xl:w-[1200px] mx-auto">
           <div className="h-[500px] flex justify-between items-center">
-            <div className="w-[50%] ">
-              <h2 className="text-3xl font-semibold text-neutral">
+            <div className="md:w-[50%]">
+              <h2 className="text-xl sm:text-3xl font-semibold text-neutral">
                 Hello, my name is
               </h2>
-              <h1 className="text-6xl font-semibold text-neutral py-2">
+              <h1 className="text-4xl sm:text-6xl font-semibold text-neutral py-2">
                 Nasim Uddin
               </h1>
-              <h2 className="text-3xl font-semibold text-neutral">
+              <h2 className="text-xl sm:text-3xl font-semibold text-neutral">
                 <span className="pr-2">And</span>
                 <span className=" animate_type">
                   <Typewriter
@@ -173,7 +180,7 @@ const Header = () => {
               </h2>
               {/* Button */}
               <div className="mt-4">
-                <button className="px-4 py-3 rounded-md text-white bg-gradient text-sm font-semibold scale-[.96] hover:scale-[1] duration-300">
+                <button className="px-4 py-1.5 sm:py-3 rounded-md text-white bg-gradient text-xs sm:text-sm font-semibold scale-[.96] hover:scale-[1] duration-300">
                   <a
                     href="https://drive.google.com/file/d/1FPrMUC8XSdUkckLhm9ERjXuLz_ayWiId/view?usp=share_link"
                     target="blank"
@@ -184,7 +191,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="w-[50%] flex justify-end">
+            <div className="w-[50%] hidden md:flex justify-end">
               <img
                 src={bannerImg}
                 alt=""

@@ -47,12 +47,12 @@ const skills = [
 const Skills = () => {
   return (
     <div>
-      <div className="w-[1200px] mx-auto py-10 ">
+      <div className="w-[90%] xl:w-[1200px] mx-auto py-10">
         <h2 className="text-center text-3xl font-semibold text-gradient">
           My Skill
         </h2>
 
-        <div className="mt-10 grid grid-cols-2 gap-8 justify-center">
+        <div className="mt-10 grid lg:grid-cols-2 gap-8 lg:justify-center">
           {skills.map((skill) => (
             <div>
               <h2 className="font-medium text-lg">{skill.language}</h2>
