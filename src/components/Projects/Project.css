@@ -1,17 +1,17 @@
 /*-------- Product Card Style --------*/
 .productCard {
   position: relative;
-  transition: transform 0.3s ease;
+  transition: all 0.8s;
 }
 .cardContent {
   padding: 10px;
   transform: scale(0.98);
-  transition: transform 0.3s ease;
+  transition: all 0.8s;
   overflow: hidden;
 }
 .card-btn {
   transform: translateY(88px);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .product-img {
@@ -42,7 +42,7 @@
   bottom: 0;
   background: #fff;
   transform: translateY(45px);
-  transition: transform 0.3s ease;
+  transition: all 0.6s;
 }
 
 /*--- Card Hover Effect ------*/
@@ -55,6 +55,12 @@
   background-color: #fff;
   box-shadow: 0 0 10px #00000026;
   border-radius: 6px;
+  color: #344767 !important;
+
+  transition: all 0.3s;
+}
+.productCard:hover .cardContent p {
+  color: #344767 !important;
 }
 
 .productCard:hover .card-btn {

@@ -98,7 +98,7 @@ const Contact = () => {
 
               <div className="grid lg:grid-cols-2 gap-4 my-4">
                 <div>
-                  <label for="">
+                  <label htmlFor="">
                     First Name <span className="text-primary">*</span>
                   </label>
                   <input
@@ -111,7 +111,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label for=""> Last Name </label>
+                  <label htmlFor=""> Last Name </label>
                   <input
                     type="text"
                     name="lastName"
@@ -123,7 +123,7 @@ const Contact = () => {
 
               <div className="grid lg:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label for="">
+                  <label htmlFor="">
                     Phone <span className="text-primary">*</span>
                   </label>
                   <input
@@ -136,7 +136,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label for="">
+                  <label htmlFor="">
                     Email <span className="text-primary">*</span>
                   </label>
                   <input
@@ -150,7 +150,7 @@ const Contact = () => {
               </div>
 
               <div className="mb-4">
-                <label for="">
+                <label htmlFor="">
                   Message <span className="text-primary">*</span>
                 </label>
                 <textarea

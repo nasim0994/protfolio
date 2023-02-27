@@ -101,7 +101,7 @@ const Header = () => {
       />
 
       <div className={activeNav ? "top-menu-active top-menu" : "top-menu"}>
-        <div className="sm:flex justify-between items-center py-2">
+        <div className="w-[95%] xl:w-[1200px] mx-auto sm:flex justify-between items-center py-2">
           <div className="flex justify-between">
             <Link
               to="/home"

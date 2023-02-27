@@ -53,8 +53,8 @@ const Skills = () => {
         </h2>
 
         <div className="mt-10 grid lg:grid-cols-2 gap-8 lg:justify-center">
-          {skills.map((skill) => (
-            <div>
+          {skills.map((skill, i) => (
+            <div key={i}>
               <h2 className="font-medium text-lg">{skill.language}</h2>
               <ProgressBar
                 completed={skill.experience}

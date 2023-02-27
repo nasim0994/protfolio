@@ -1,48 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bikroyStore from "../../images/bikroy.png";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
+import image from "../../images/bikroy.png";
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
   return (
-    <div class="productCard">
-      <div class="cardContent">
-        <div class="card-top relative">
+    <div className="productCard">
+      <div className="cardContent">
+        <div className="card-top relative">
           <Link
-            class="product-img"
+            className="product-img"
             to="https://bikroystore-f0230.firebaseapp.com/"
             target="_blank"
           >
-            <img src={bikroyStore} alt="bikroyStore" />
+            <img src={image} alt="bikroyStore" />
           </Link>
 
           <Link
-            class="live-link text-secondary"
-            to="https://bikroystore-f0230.firebaseapp.com/"
+            className="live-link text-secondary"
+            to={project.liveLink}
             target="_blank"
           >
             <AiOutlineLink /> Live <span>Site</span>
           </Link>
         </div>
 
-        <div class="pt-2">
-          <h2 className="text-info text-2xl font-semibold ">BikroyStore</h2>
-          <p className="text-info/90 text-sm">
+        <div className="pt-2">
+          <h2 className="text-2xl font-semibold ">{project.name}</h2>
+          <p className="text-neutral/60 text-sm">
             <span className="font-semibold">Technologies:</span>
-            React.js, Express.js, MongoDB, Firebase, JWT, Tailwind CSS, React
-            Query, Stripe, React Hook Form.
+            {project.technologies}
           </p>
         </div>
 
-        <div class="card-btn mt-3 flex justify-between">
+        <div className="card-btn mt-3 flex justify-between">
           <button className="text-info text-sm border rounded-md py-2 px-2 scale-[.97] hover:scale-[1] hover:bg-gray-50 duration-300">
-            <Link to="" className="flex gap-1 items-center">
+            <Link
+              to={project.clientLink}
+              target="_blank"
+              className="flex gap-1 items-center"
+            >
               <AiFillGithub className="text-lg" />
               Client Code
             </Link>
           </button>
           <button className="text-info text-[15px] border rounded-md py-2 px-2 scale-[.97] hover:scale-[1] hover:bg-gray-50 duration-300">
-            <Link to="" className="flex gap-1 items-center">
+            <Link
+              to={project.serverLink}
+              target="_blank"
+              className="flex gap-1 items-center"
+            >
               <AiFillGithub className="text-lg" />
               Server Code
             </Link>
