@@ -131,3 +131,11 @@ span.animate_type span {
     max-height: 600px;
   }
 }
+
+.active {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+}

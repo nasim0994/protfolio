@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
-import image from "../../images/bikroy.png";
 
 const ProjectCard = ({ project }) => {
   return (
     <div className="productCard">
       <div className="cardContent">
         <div className="card-top relative">
-          <Link
-            className="product-img"
-            to="https://bikroystore-f0230.firebaseapp.com/"
-            target="_blank"
-          >
-            <img src={image} alt="bikroyStore" />
+          <Link className="product-img" to={project.liveLink} target="_blank">
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full h-56 rounded"
+            />
           </Link>
 
           <Link
@@ -26,8 +25,8 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div className="pt-2">
-          <h2 className="text-2xl font-semibold ">{project.name}</h2>
-          <p className="text-neutral/60 text-sm">
+          <h2 className="text-2xl font-semibold text-info">{project.name}</h2>
+          <p className="text-info text-sm">
             <span className="font-semibold">Technologies:</span>
             {project.technologies}
           </p>

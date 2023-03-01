@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
 import bannerImg from "../../images/banner.png";
+
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -104,7 +105,7 @@ const Header = () => {
         <div className="w-[95%] xl:w-[1200px] mx-auto sm:flex justify-between items-center py-2">
           <div className="flex justify-between">
             <Link
-              to="/home"
+              to="/"
               className="text-gradient font-bold text-xl sm:text-2xl logo"
             >
               <span>Nasim</span>
@@ -128,18 +129,25 @@ const Header = () => {
             >
               <ul className="sm:flex text-neutral">
                 <li>
-                  <NavLink to="">Home</NavLink>
+                  <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="">Project</NavLink>
+                  <NavLink
+                    to="project"
+                    className="hover:text-secondary duration-300"
+                  >
+                    Project
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="">Services</NavLink>
+                  <NavLink
+                    to="contact"
+                    className="hover:text-secondary duration-300"
+                  >
+                    Contact
+                  </NavLink>
                 </li>
-                <li>
-                  <NavLink to="">Contact</NavLink>
-                </li>
-                <li>
+                <li className="hover:text-secondary duration-300">
                   <Link to="https://codegallery-32763.web.app/" target="_blank">
                     Blogs
                   </Link>
@@ -152,7 +160,7 @@ const Header = () => {
 
       <div>
         <div className="w-[90%] xl:w-[1200px] mx-auto">
-          <div className="h-[500px] flex justify-between items-center">
+          <div className="h-[100vh] flex justify-between items-center">
             <div className="md:w-[50%]">
               <h2 className="text-xl sm:text-3xl font-semibold text-neutral">
                 Hello, my name is

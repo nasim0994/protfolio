@@ -10,9 +10,9 @@ import { MdLocationOn, MdEmail, MdFacebook } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="bg-gray-100 m-4 rounded-lg">
       <div className="w-[90%] xl:w-[1200px] mx-auto py-10">
-        {/* Title */}
+        {/* title */}
         <div className="text-center mb-14">
           <h2 className="text-3xl text-info font-semibold text-gradient">
             Have Any Questions?
@@ -25,63 +25,67 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-title text-2xl font-bold mb-1">Find out me</h2>
+            <h2 className="text-info text-2xl font-bold mb-1">Find out me</h2>
 
-            <div className="mt-10 text-title">
+            <div className="mt-10 text-info">
               <div className="flex items-center gap-4 mb-4">
-                <div className="border border-title rounded-full w-10 h-10 flex items-center justify-center">
+                <div className="border border-info rounded-full w-10 h-10 flex items-center justify-center">
                   <AiFillPhone />
                 </div>
                 <p>+880 1706 260 994</p>
               </div>
 
               <div className="flex items-center gap-4 mb-4">
-                <div className="border border-title rounded-full w-10 h-10 flex items-center justify-center">
+                <div className="border border-info rounded-full w-10 h-10 flex items-center justify-center">
                   <MdEmail />
                 </div>
                 <p>nasimuddin0994@gmail.com</p>
               </div>
 
               <div className="flex items-center gap-4 mb-4">
-                <div className="border border-title rounded-full w-10 h-10 flex items-center justify-center">
+                <div className="border border-info rounded-full w-10 h-10 flex items-center justify-center">
                   <MdLocationOn />
                 </div>
                 <p>Dhaka, Bangladesh</p>
               </div>
             </div>
 
-            <div className="w-full h-px bg-gradient-to-l from-neutral via-gray-300 to-neutral my-8"></div>
+            <div className="w-full h-px bg-gradient-to-l from-gray-100 via-gray-400 to-gray-100 my-8"></div>
 
             <div className="mt-6">
               <ul className="flex gap-6">
                 <li>
                   <Link
-                    to=""
-                    className="text-xl border border-title rounded-full w-10 h-10 flex items-center justify-center hover:text-secondary hover:border-secondary duration-200"
+                    to="https://www.facebook.com/nasimuddin0994"
+                    target="_blank"
+                    className="text-xl border border-info rounded-full w-10 h-10 flex items-center justify-center hover:text-secondary hover:border-secondary duration-200"
                   >
                     <MdFacebook />
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to=""
-                    className="text-xl border border-title rounded-full w-10 h-10 flex items-center justify-center hover:text-primary hover:border-primary duration-200"
+                    to="https://www.linkedin.com/in/mdnasimuddin/"
+                    target="_blank"
+                    className="text-xl border border-info rounded-full w-10 h-10 flex items-center justify-center hover:text-primary hover:border-primary duration-200"
                   >
                     <AiFillLinkedin />
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to=""
-                    className="text-xl border border-title rounded-full w-10 h-10 flex items-center justify-center hover:text-blue-700 hover:border-blue-700 duration-200"
+                    to="https://github.com/nasim0994"
+                    target="_blank"
+                    className="text-xl border border-info rounded-full w-10 h-10 flex items-center justify-center hover:text-blue-700 hover:border-blue-700 duration-200"
                   >
                     <AiFillGithub />
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to=""
-                    className="text-xl border border-title rounded-full w-10 h-10 flex items-center justify-center hover:text-[#0CC243] hover:border-[#0CC243] duration-200"
+                    to="https://wa.link/ipogls"
+                    target="_blank"
+                    className="text-xl border border-info rounded-full w-10 h-10 flex items-center justify-center hover:text-[#0CC243] hover:border-[#0CC243] duration-200"
                   >
                     <AiOutlineWhatsApp />
                   </Link>

@@ -1,0 +1,6 @@
+.about-img {
+  -webkit-mask-image: url("../../images/graph.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+}

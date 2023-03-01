@@ -11,16 +11,13 @@
 }
 .card-btn {
   transform: translateY(88px);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .product-img {
   position: relative;
 }
-.product-img img {
-  height: 310px;
-  width: 100%;
-}
+
 .card-top {
   position: relative;
   overflow: hidden;

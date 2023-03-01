@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.css";
 import About from "../../components/About/About";
 import Projects from "../../components/Projects/Projects";
 import Skills from "../../components/Skills/Skills";

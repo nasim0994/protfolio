@@ -7,10 +7,12 @@ const About = () => {
     <div className="w-[90%] xl:w-[1200px] mx-auto bg-neutral py-10">
       <div className="lg:flex gap-14">
         <div className="lg:w-[40%] flex flex-col items-end">
-          <div className="about-img-bg">
+          <div className="about-img">
             <img src={me} alt="" className="rounded-xl" />
           </div>
         </div>
+
+        {/* Right */}
         <div className="lg:w-[60%] mt-8 lg:mt-0">
           <h2 className="text-4xl font-bold text-info pb-3">About Me</h2>
           <h2 className="text-2xl text-info font-semibold pb-2">
@@ -55,7 +57,7 @@ const About = () => {
             </div>
             <div className="text-center">
               <h2 className="text-4xl font-bold">
-                <CountUp start={0} end={1} duration={0.5} />
+                <CountUp start={0} end={2} duration={0.5} />
                 <span className="text-secondary">+</span>
               </h2>
               <h2 className="font-semibold">Month Internship Experience</h2>

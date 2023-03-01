@@ -5,7 +5,7 @@ import projects from "../../data/projects";
 
 const Projects = () => {
   return (
-    <div className="bg-gray-900 text-neutral m-3 rounded-lg py-10">
+    <div className="bg-gray-100 text-neutral m-3 rounded-lg py-10">
       <div className="w-[90%] xl:w-[1200px] mx-auto ">
         <h2 className="text-center text-3xl text-gradient font-semibold">
           Recent Project
